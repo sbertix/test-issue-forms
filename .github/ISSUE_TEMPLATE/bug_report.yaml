@@ -1,27 +1,27 @@
 name: Bug report
-description: >-
-  Report a bug found in a released version of the app, or in the `master`
-  branch.
+description: Report a bug found in a released version of the app, or in the `master` branch.
 labels:
   - bug
 body:
   - type: markdown
     attributes:
-      value: |
-        _Please **do not use emojis** in the **title**. They should be reserved
-        for commits._ 
+      value: >-
+        _Please **do not use emojis** in the **title**. They should be 
+        reserved for commits._ 
 
         _**Labels** will be **automatically assigned** after the issue is
-        created, so there's, usually, no need to add them manually, unlike
+        created, so there's, usually, no need to set them manually, unlike
         **Project** and **Milestone**._ 
   - type: dropdown
     id: type
     attributes:
       label: Type
-      description: |
+      description: >-
         What type of bug is this? 
-        - **Glitch**: non-functional issue in the app, usually related to misbehaving UI 
-        - **Crash**: a serious issue that crashes the app 
+        
+        * **Glitch**: non-functional issue in the app, usually related to misbehaving UI 
+        * **Crash**: a serious issue that crashes the app 
+        
         _Appropriate **Labels** will be applied automatically._
       options:
         - Other
@@ -33,9 +33,10 @@ body:
     id: reference
     attributes:
       label: Reference
-      description: |
-        Where can we find more about this? Just pasting a Slack or Intercom URL
-        is, usually, fine. 
+      description: >-
+        Where can we find more about this? Just pasting a Slack or 
+        Intercom URL is, usually, fine. 
+        
         _Keep this one line only._
   - type: textarea
     id: description
@@ -43,7 +44,7 @@ body:
       label: Description
       description: >-
         What's the actual bug? Describe what happens. This is also the place for
-        attaching screenshots, videos, etc.
+        attaching screenshots, videos, etc. 
       placeholder: 'Example: New entries are never synced…'
     validations:
       required: true
@@ -59,9 +60,10 @@ body:
     id: os
     attributes:
       label: Affected platforms
-      description: |
+      description: >-
         Is this platform specific? Please select them all if
         not. 
+        
         _Appropriate **Labels** will be applied automatically._
       multiple: true
       options:
