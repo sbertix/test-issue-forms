@@ -1,0 +1,103 @@
+name: Bug report
+description: >-
+  Report a bug found in a released version of the app, or in the `master`
+  branch.
+title: ''
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        _Please **do not use emojis** in the **title**. They should be reserved
+        for commits._ 
+
+        _**Labels** will be **automatically assigned** after the issue is
+        created, so there's, usually, no need to add them manually, unlike
+        **Project** and **Milestone**._ 
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      description: |
+        What type of bug is this? 
+        - **Glitch**: non-functional issue in the app, usually related to misbehaving UI 
+        - **Crash**: a serious issue that crashes the app 
+        _Appropriate **Labels** will be applied automatically._
+      options:
+        - Other
+        - Glitch
+        - Crash
+    validations:
+      required: true
+  - type: input
+    id: reference
+    attributes:
+      label: Reference
+      description: |
+        Where can we find more about this? Just pasting a Slack or Intercom URL
+        is, usually, fine. 
+        _Keep this one line only._
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: >-
+        What's the actual bug? Describe what happens. This is also the place for
+        attaching screenshots, videos, etc.
+      placeholder: 'Example: New entries are never synced…'
+    validations:
+      required: true
+  - type: textarea
+    id: expectation
+    attributes:
+      label: Expected behavior
+      description: What should be happening instead? Even just a few words are enough.
+      placeholder: 'Example: Entries are synced correctly. '
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Affected platforms
+      description: |
+        Is this platform specific? Please select them all if
+        not. 
+        _Appropriate **Labels** will be applied automatically._
+      multiple: true
+      options:
+        - iOS
+        - iPadOS
+        - macOS
+        - watchOS
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: >-
+        Does this bug affect released versions of the app or is it just found on
+        unreleased commits of the `master` branch. 
+      options:
+        - Affecting stable versions
+        - Affecting beta versions
+        - Affecting `master` branch only
+    validations:
+      required: true
+  - type: textarea
+    id: devices
+    attributes:
+      label: Affected devices and versions
+      description: >-
+        Where does this happen? Please try and least devices, as well as OS and
+        app versions.
+      placeholder: 'Example: iPhone 13 Pro, iOS 15.4, app v. 4.1.0'
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: >-
+        How can we reproduce this? Try and list all steps required to reproduce
+        the bug. Leave it empty if it cannot be reproduced. 
+      placeholder: 'Example: 1. Create a new entry'
