@@ -19,11 +19,11 @@ body:
       description: >-
         What type of bug is this? 
         
+        _Appropriate **Labels** will be applied automatically._
+        
         * **Glitch**: non-functional issue in the app, usually related to misbehaving UI 
         
-        * **Crash**: a serious issue that crashes the app 
-        
-        _Appropriate **Labels** will be applied automatically._
+        * **Crash**: a serious issue that crashes the app         
       options:
         - Other
         - Glitch
