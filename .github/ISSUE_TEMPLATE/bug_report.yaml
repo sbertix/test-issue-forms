@@ -20,6 +20,7 @@ body:
         What type of bug is this? 
         
         * **Glitch**: non-functional issue in the app, usually related to misbehaving UI 
+        
         * **Crash**: a serious issue that crashes the app 
         
         _Appropriate **Labels** will be applied automatically._
@@ -48,6 +49,14 @@ body:
       placeholder: 'Example: New entries are never synced…'
     validations:
       required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: >-
+        How can we reproduce this? Try and list all steps required to reproduce
+        the bug. Leave it empty if it cannot be reproduced. 
+      placeholder: 'Example: 1. Create a new entry'
   - type: textarea
     id: expectation
     attributes:
@@ -94,11 +103,3 @@ body:
         Where does this happen? Please try and least devices, as well as OS and
         app versions.
       placeholder: 'Example: iPhone 13 Pro, iOS 15.4, app v. 4.1.0'
-  - type: textarea
-    id: steps
-    attributes:
-      label: Steps to reproduce
-      description: >-
-        How can we reproduce this? Try and list all steps required to reproduce
-        the bug. Leave it empty if it cannot be reproduced. 
-      placeholder: 'Example: 1. Create a new entry'
