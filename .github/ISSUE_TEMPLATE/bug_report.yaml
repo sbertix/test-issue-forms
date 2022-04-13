@@ -65,7 +65,7 @@ body:
       placeholder: 'Example: Entries are synced correctly. '
     validations:
       required: true
-  - type: dropdown
+  - type: checkboxes
     id: os
     attributes:
       label: Affected platforms
@@ -74,12 +74,11 @@ body:
         not. 
         
         _Appropriate **Labels** will be applied automatically._
-      multiple: true
       options:
-        - iOS
-        - iPadOS
-        - macOS
-        - watchOS
+        - label: iOS
+        - label: iPadOS
+        - label: macOS
+        - label: watchOS
     validations:
       required: true
   - type: dropdown
